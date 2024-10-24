@@ -1,0 +1,88 @@
+﻿@model POOI_ProyectoVentas_AltamiranoBryan.Models.articulo
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Eliminar Articulo</h2>
+
+<h3>Esta seguro que quiere realizar esta operación?</h3>
+<div>
+    <h4>articulo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.idarticulo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idarticulo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.idcategoria)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idcategoria)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.codigo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.codigo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nombreArticulo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombreArticulo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.stock)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.stock)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.imagen)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.imagen)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.estado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.estado)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

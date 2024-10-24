@@ -1,0 +1,63 @@
+﻿@model IEnumerable<POOI_ProyectoVentas_AltamiranoBryan.Models.detalle_venta>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Detalle de Ventas</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.iddetalle_venta)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.idventa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.idarticulo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cantidad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.precio_venta)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.descuento)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.iddetalle_venta)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.idventa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.idarticulo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cantidad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.precio_venta)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.descuento)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new {  id=item.iddetalle_venta}) |
+            @Html.ActionLink("Details", "Details", new { id = item.iddetalle_venta }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.iddetalle_venta })
+        </td>
+    </tr>
+}
+
+</table>

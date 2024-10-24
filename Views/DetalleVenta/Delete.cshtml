@@ -1,0 +1,72 @@
+﻿@model POOI_ProyectoVentas_AltamiranoBryan.Models.detalle_venta
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>detalle_venta</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.iddetalle_venta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.iddetalle_venta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.idventa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idventa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.idarticulo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idarticulo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cantidad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cantidad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.precio_venta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.precio_venta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.descuento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.descuento)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
